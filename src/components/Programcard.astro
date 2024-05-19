@@ -6,16 +6,16 @@
 <h2>Program</h2>
 <section class="flex justify-center ">
     <div class=" w-full">
-        <section class="flex flex-wrap">
+        <section class="flex flex-wrap gap-12">
             <template  x-for="program in alleprogram" :key="program.id">
                 <div class="bg-sand-500 rounded-[18px] mb-9 w-[350px]">
                     <article class="grid grid-cols-2">
-                        <img :src="program.kunsterbilled" :alt="program.kunsterbilledalt" 
+                        <img :src="program.kunsterbilled" :alt="program.kunsterbilledalt" class="-mt-[20%] -ml-[20%]"
                         />
                         <h4 x-text="program.kunster" class="place-self-center text-rod-500 font-khand font-bold text-[30px] tracking-[5px]"></h4>
                     </article>
-                    <p x-text="program.beskrivelse" class="text-[16px] font-anek tracking-[2px]"></p>
-                    <div class="flex flex-row place-self-center py-12 text-rod-500 font-khand font-bold text-[30px] tracking-[2px] space-x-6">
+                    <p x-text="program.beskrivelse" class="text-[16px] pt-6 px-8 font-anek tracking-[2px]"></p>
+                    <div class="flex flex-row place-self-center px-8 py-12 text-rod-500 font-khand font-bold text-[30px] tracking-[2px] space-x-6">
                     <span class="">Spiller </span>
                     <span x-text="program.tidspunkt" class=""></div></div>
                     </span>
@@ -37,29 +37,3 @@
 
 
 
-<!-- <section
-x-data="{ alleprogram: []}"
-x-init="alleprogram = await (await fetch('program.json')).json(); alleprogram.reverse();"
-class="">
-<template x-for="program in alleprogram" :key="program.id">
-
-<div class="flex flex-col">
-    
-<section class="bg-sand-500 mb-9 rounded-[18px] max-w-[350px]">
-    <template x-for="program in alleprogram" :key="program.id">
-
-    <div class="">
- <div class="grid grid-cols-2">
-    <img :src="program.kunsterbilled" :alt="program.kunsterbilledalt" class=""/>
-    <h4 x-text="program.kunster" class="place-self-center text-rod-500 font-khand font-bold text-[30px] tracking-[5px]"></h4>
-</div>
-<div class="flex flex-col px-4">
-    <p x-text="program.beskrivelse" class="text-[16px] font-anek tracking-[2px]"></p>
-    <div class="flex flex-row place-self-center py-12 text-rod-500 font-khand font-bold text-[30px] tracking-[2px] space-x-6">
-    <span class="">Spiller </span>
-    <span x-text="program.tidspunkt" class=""></div>
-    </span></div>
-</div>
-</section>
-</div>
- -->
