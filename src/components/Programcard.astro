@@ -1,0 +1,21 @@
+<section
+x-data="{ alleprogram: []}"
+x-init="alleprogram = await (await fetch('program.json')).json(); alleprogram.reverse();"
+class=""
+>
+<template x-for="program in alleprogram" :key="program.id">
+
+
+<section class="bg-sand-500">
+    <div class="flex flex-row">
+<img :src="program.kunsterbilled" :alt="program.kunsterbilledalt"/>
+<h4 x-text="program.kunster"></h4>
+</div>
+<div class="flex flex-col">
+    <p x-text="program.beskrivelse"></p>
+    <div x-text="program.tidspunkt"></div>
+</div>
+</section>
+
+
+</template>
