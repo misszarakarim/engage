@@ -6,15 +6,17 @@ class=""
 <template x-for="program in alleprogram" :key="program.id">
 
 
-<section class="bg-sand-500">
-    <div class="flex flex-row">
+<section class="bg-sand-500 mb-9 rounded-[18px] px-12">
+    <div class="grid grid-cols-2">
 <img :src="program.kunsterbilled" :alt="program.kunsterbilledalt"/>
-<h4 x-text="program.kunster"></h4>
+<h4 x-text="program.kunster" class="place-self-center text-rod-500 font-khand font-bold text-[19px] tracking-[5px]"></h4>
 </div>
 <div class="flex flex-col">
-    <p x-text="program.beskrivelse"></p>
-    <div x-text="program.tidspunkt"></div>
-</div>
+    <p x-text="program.beskrivelse" class="text-[16px] font-anek tracking-[2px]"></p>
+    <div class="flex flex-row place-self-center py-12 text-rod-500 font-khand font-bold text-[30px] tracking-[5px] space-x-6">
+    <span class="">Spiller </span>
+    <span x-text="program.tidspunkt" class=""></div>
+    </span></div>
 </section>
 
 
