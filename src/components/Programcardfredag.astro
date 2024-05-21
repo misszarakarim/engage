@@ -1,40 +1,31 @@
-
-
 <section>
     <article class="py-12">
-        <section x-data="{ alleprogramfredag: []}"
-        x-init="alleprogramfredag = await (await fetch('programfredag.json')).json(); alleprogramfredag.reverse();"
-        class="">
-        <div class="flex justify-center items-center flex-col mb-12">
-        <h2 class="font-khand text-[34px] font-bold tracking-[5px] text-rod-500">Fredag 7/6</h2>
-        <h5 class="font-anek text-[16px] text-rod-500 tracking-[2px]">Der bliver løbende opdateret angående artister</h5></div>
-<section class="flex justify-center ">
-    <div class=" w-full">
-        <section class="flex flex-wrap gap-12">
-            <template  x-for="programfredag in alleprogramfredag" :key="programfredag.id">
-                <div class="bg-sand-500 rounded-[18px] mb-9 w-[350px] ml-10 mt-10">
-                    <article class="grid grid-cols-2">
-                        <img :src="programfredag.kunsterbilled" :alt="programfredag.kunsterbilledalt" class="-mt-[20%] -ml-[20%]"
-                        />
-                        <h4 x-text="programfredag.kunster" class="place-self-center text-rod-500 font-khand font-bold text-[30px] tracking-[5px]"></h4>
-                    </article>
-                    <p x-text="programfredag.beskrivelse" class="text-[16px] pt-6 px-8 font-anek tracking-[2px]"></p>
-                    <div class="flex flex-row place-self-center px-8 py-12 justify-center text-rod-500 font-khand font-bold text-[30px] tracking-[2px] space-x-6">
-                    <span class="">Spiller </span>
-                    <span x-text="programfredag.tidspunkt" class=""></div></div>
-                    </span>
+        <section x-data="{ alleprogramfredag: [] }"
+                 x-init="alleprogramfredag = await (await fetch('programfredag.json')).json(); alleprogramfredag.reverse();"
+                 class="">
+            <div class="flex justify-center items-center flex-col mb-12">
+                <h2 class="font-khand text-[34px] font-bold tracking-[5px] text-rod-500">Fredag 7/6</h2>
+                <h5 class="font-anek text-[16px] text-rod-500 tracking-[2px]">Der bliver løbende opdateret angående artister</h5>
+            </div>
+            <section class="flex justify-center items-center">
+                <div class="w-full max-w-screen-xl mx-auto">
+                    <section class="flex flex-wrap justify-center gap-12">
+                        <template x-for="programfredag in alleprogramfredag" :key="programfredag.id">
+                            <div class="bg-sand-500 rounded-[18px] mb-9 w-[350px]">
+                                <article class="grid grid-cols-2">
+                                    <img :src="programfredag.kunsterbilled" :alt="programfredag.kunsterbilledalt" class="-mt-[20%] -ml-[20%]" />
+                                    <h4 x-text="programfredag.kunster" class="place-self-center text-rod-500 font-khand font-bold text-[30px] tracking-[5px]"></h4>
+                                </article>
+                                <p x-text="programfredag.beskrivelse" class="text-[16px] pt-6 px-8 font-anek tracking-[2px]"></p>
+                                <div class="flex flex-row place-self-center px-8 py-12 justify-center text-rod-500 font-khand font-bold text-[30px] tracking-[2px] space-x-6">
+                                    <span>Spiller</span>
+                                    <span x-text="programfredag.tidspunkt"></span>
+                                </div>
+                            </div>
+                        </template>
+                    </section>
                 </div>
-                
-            </template>
-        </section>
-    </div>
-
-</section>
+            </section>
         </section>
     </article>
-</section> 
-
-
-
-
-
+</section>
