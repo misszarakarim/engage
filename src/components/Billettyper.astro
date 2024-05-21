@@ -2,20 +2,20 @@
 import Billet from "../pages/billet.astro";
 ---
 
-<section class="flex flex-col items-center justify-center mx-2">
+<section class="flex flex-col items-center justify-center mx-2 mt-10">
     <div class="">
-        <div class="grid grid-cols-3 gap-20 mb-4 font-bold text-rod-500 text-center font-khand text-[19px]">
-            <h4>Billettype</h4>
-            <h4>Pris</h4>
-            <h4>Antal</h4>
+        <div class="grid grid-cols-3 gap-4 mb-4 font-bold text-rod-500 text-center font-khand text-[19px] md:text-[30px] md:gap-[10rem] tracking-[2px]">
+            <div>Billettype</div>
+            <div>Pris</div>
+            <div>Antal</div>
         </div>
 
-        <div class="bg-sand-500 p-5 rounded-[18px] mb-8 font-khand text-[19px]">
+        <div class="bg-sand-500 p-5 rounded-[18px] mb-6 font-khand text-[19px] md:text-[30px] tracking-[2px]">
             <div class="grid grid-cols-3 gap-14 items-center text-rod-500 font-semibold">
-                <h4>PARTOUT</h4>
-                <h4>774,00 kr</h4>
-                <div>
-                    <select class="rounded-[18px] p-3 w-[100px] bg-cream-500 border-transparent pl-4">
+                <div>PARTOUT</div>
+                <div>774,00 kr (kr.749,00)</div>
+                <div class="md:pl-[117px]">
+                    <select class="rounded-[7px] p-3 w-[100px] bg-cream-500 border-transparent custom-select">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -41,12 +41,12 @@ import Billet from "../pages/billet.astro";
             </div>
         </div>
 
-        <div class="bg-sand-500 p-5 rounded-[18px] mb-8 font-khand text-[19px]">
+        <div class="bg-sand-500 p-5 rounded-[18px] mb-6 font-khand text-[19px] md:text-[30px] tracking-[2px]">
             <div class="grid grid-cols-3 gap-14 items-center text-rod-500 font-semibold">
-                <h4>FREDAGSBILLET</h4>
-                <h4>424,00 kr</h4>
-                <div>
-                    <select class="rounded-[18px] p-3 w-[100px] bg-cream-500 border-transparent pl-4">
+                <div>FREDAGSBILLET</div>
+                <div>424,00 kr (kr.399,00)</div>
+                <div class="md:pl-[117px]">
+                    <select class="rounded-[7px] p-3 w-[100px] bg-cream-500 border-transparent custom-select">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -72,12 +72,12 @@ import Billet from "../pages/billet.astro";
             </div>
         </div>
 
-        <div class="bg-sand-500 p-5 rounded-[18px] mb-8 font-khand text-[19px]">
+        <div class="bg-sand-500 p-5 rounded-[18px] mb-6 font-khand text-[19px] md:text-[30px] tracking-[2px]">
             <div class="grid grid-cols-3 gap-14 items-center text-rod-500 font-semibold">
-                <h4>LØRDAGSBILLET</h4>
-                <h4>524,00 kr</h4>
-                <div>
-                    <select class="rounded-[18px] p-3 w-[100px] bg-cream-500 border-transparent pl-4">
+                <div>LØRDAGSBILLET</div>
+                <div>524,00 kr (kr.499,00)</div>
+                <div class="md:pl-[117px]">
+                    <select class="rounded-[7px] p-3 w-[100px] bg-cream-500 border-transparent custom-select">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -104,3 +104,16 @@ import Billet from "../pages/billet.astro";
         </div>
     </div>
 </section>
+
+<style>
+    .custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('/down.png'); 
+  background-repeat: no-repeat;
+  background-position: right 10px center; 
+  background-size: 20px; 
+  padding-right: 30px;
+}
+</style>
