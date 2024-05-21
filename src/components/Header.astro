@@ -1,4 +1,5 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
 ---
   <nav class="p-4">
         <div class="container mx-auto flex justify-between items-center">
@@ -24,11 +25,11 @@
 
                     <!-- Dropdown menu -->
                     <div x-show="open" @click.away="open = false" class="absolute top-[73px] right-[20px] bg-sand-500 w-[26rem] rounded-lg shadow-lg py-2 text-center font-khand font-bold text-[19px] md:top-[96px] md:right-[20px] md:w-[12rem] md:text-[22px]">
-                        <a href="/index.astro" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">FORSIDE</a>
-                        <a href="/nyheder.astro" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">NYHED</a>
-                        <a href="/program.astro" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">PROGRAM</a>
-                        <a href="/omos.astro" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">OM OS</a>
-                        <a href="billet.astro" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">BILETTER</a>
+                        <a href="/" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">FORSIDE</a>
+                        <a href="/nyheder" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">NYHED</a>
+                        <a href="/program" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">PROGRAM</a>
+                        <a href="/omos" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">OM OS</a>
+                        <a href="/billet" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">BILETTER</a>
                     </div>
                 </div>
             </div>
