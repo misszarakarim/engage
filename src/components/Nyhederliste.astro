@@ -7,15 +7,15 @@ import Button from "./Button.astro"
 <section x-data="{ allenyheder: [] }"
 x-init="allenyheder = await (await fetch('nyheder.json')).json(); allenyheder.reverse();"
 class="">
-<h3 class="flex items-center justify-center">Nyheder</h3>
+<h2 class="flex items-center justify-center font-khand text-rod-500 font-bold tracking-[5px] text-[34px]">Nyheder</h2>
 <div class="flex flex-col space-y-[30px]">
 <template x-for="nyheder in allenyheder" :key="nyheder.id">
     <div class="bg-sand-500 mx-24 rounded-[18px] ">
         <div class="flex flex-col mb-8 ">
         <img :src="nyheder.billede" :alt="nyheder.billedealt" class="rounded-t-lg" />
         <div class="mx-7 mt-5">
-            <h4 x-text="nyheder.overskrift"></h4>
-            <p x-text="nyheder.tekst"></p>
+            <h4 x-text="nyheder.overskrift" class="text-rod-500 font-khand font-bold tracking-[2px] text-[19px]"></h4>
+            <p x-text="nyheder.tekst" class="font-anek text-[16px] tracking-[2px] my-3"></p>
             <a class="flex justify-end" href="/nyheder"><Button>LÆS MERE</Button></a>
        </div>
   </div> 
