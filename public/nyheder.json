@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "billede": "nyhed1.jpeg",
+        "billedealt": "koncert",
+        "overskrift": "Pårørende til veteraner gratis til Engage",
+        "tekst": "I samarbejde med Veteranfonden uddeler Fonden Danske Veteranhjem 2×60 dagsbilletter til fredag og lørdag på ENGAGE Festival til pårørende af veteraner. Det sker med støtte"
+
+    },
+    {
+        "id": "2",
+        "billede": "nyhed2.jpeg",
+        "billedealt": "artister",
+        "overskrift": "Tre spændende navne lukker årets program",
+        "tekst": "Rikke Thomsen, Kalaset og Pauline er blevet skrevet på plakaten til årets ENGAGE i Kastellet, og det er tre knassprøde navne, der dermed fuldender programmet"
+
+    },
+    {
+        "id": "3",
+        "billede": "nyhed3.jpeg",
+        "billedealt": "publikum",
+        "overskrift": "Kom med til festen - bliv frivillig på ENGAGE",
+        "tekst": "Bliv en del af et unikt fællesskab som en del af crewet på Danmarks hyggeligste festival – og vær samtidig med til at gøre noget godt for"
+
+    }
+]

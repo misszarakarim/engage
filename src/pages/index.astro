@@ -1,9 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Nyheder from '../components/Nyhederliste.astro';
 ---
 <MainLayout title="Titel">
 	<article>
 		<p>Index indhold</p>
+
+		<Button variant="secondary">KØB BILLET</Button></div>
+		<Button>LÆS MERE</Button>
+		<Button variant="tertiary">BRUG KODE</Button>
 	</article>
+
+	<Nyheder></Nyheder>
 </MainLayout>

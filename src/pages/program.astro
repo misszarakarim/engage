@@ -1,1 +1,19 @@
-hej med dig
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import Programcardlordag from "../components/Programcardlordag.astro"
+import Programcardfredag from "../components/Programcardfredag.astro"
+import Header from "../components/Headmonster.astro"
+
+---
+
+<MainLayout>
+    <Header overskrift="Program"></Header>
+    <Programcardfredag></Programcardfredag>
+
+<h1>
+    ADFTG
+</h1>
+<Programcardlordag></Programcardlordag>
+
+
+</MainLayout>
