@@ -1,0 +1,27 @@
+---
+import Button from "./Button.astro"
+---
+
+<section>
+    <article>
+<section x-data="{ allenyheder: [] }"
+x-init="allenyheder = await (await fetch('nyheder.json')).json(); allenyheder.reverse();"
+class="">
+<h3 class="flex items-center justify-center">Nyheder</h3>
+<div class="flex flex-col space-y-[30px]">
+<template x-for="nyheder in allenyheder" :key="nyheder.id">
+    <div class="bg-sand-500 mx-24 rounded-[18px] ">
+        <div class="flex flex-col mb-8 ">
+        <img :src="nyheder.billede" :alt="nyheder.billedealt" class="rounded-t-lg" />
+        <div class="mx-7 mt-5">
+            <h4 x-text="nyheder.overskrift"></h4>
+            <p x-text="nyheder.tekst"></p>
+            <a class="flex justify-end" href="/nyheder"><Button>LÆS MERE</Button></a>
+       </div>
+  </div> 
+</div>
+</template>
+
+</section>
+</article>
+</section>
