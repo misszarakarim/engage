@@ -1,5 +1,13 @@
 ---
+const { variant="primary"} = Astro.props;
+
+const buttonStyling = "bg-blo-500 rounded-[7px] py-1 px-3 font-khand text-cream-500 font-bold tracking-[2px] text-[13px]"
+
+const variantClasses = {
+    "primaery": "",
+    "secondary": "",
+    "tertiary":""
+};
 ---
-<div>
-    <button><slot /></button>
-</div>
+
+<button class:list={[buttonStyling, variantClasses[variant],]}><slot /></button>
