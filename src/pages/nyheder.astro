@@ -2,10 +2,13 @@
 import Nyhedersingle from "../components/Nyhedersingle.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Headmonster.astro"
+
 ---
 
 <section>
     <MainLayout />
+    <Header overskrift="NYHEDER"></Header>
     <Nyhedersingle />
     <Nyhedsbrev />
 </section>
