@@ -3,20 +3,60 @@ import Button from "./Button.astro"
 import Countdown from "./Countdown.astro"
 ---
 
-<div class="h-[200px] flex items-center justify-center xl:h-[620px] min-[500px]:h-[250px] min-[650px]:h-[300px] min-[750px]:h-[350px] min-[850px]:h-[400px] min-[950px]:h-[450px] min-[1050px]:h-[500px] min-[1150px]:h-[550px] min-[1250px]:h-[600px] relative">
-    <img src="/Hero.svg" alt="Herografik" class="w-[100%] h-[180%] object-cover object-center z-20 absolute">
-    <img src="/herobillede.png" alt="" class="z-10 absolute">
-    <div class="z-30 flex justify-center items-center flex-col">
-    <h1 class="font-khand text-[82px] font-bold tracking-[5px] text-cream-500	
-    drop-shadow-lg
-    
-    ">ENGAGE</h1>
-<h3 class="font-khand text-[22px] text-sand-500 font-bold tracking-[2px] -mt-8">Musikfestival på kastellet</h3>  
-<Countdown></Countdown> 
-</div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="object-fill flex items-center -mt-7 justify-center xl:h-[620px] min-[500px]:h-[250px] min-[650px]:h-[300px] min-[650px]:mt-0 min-[750px]:h-[350px] min-[850px]:h-[400px] min-[950px]:h-[450px] min-[1050px]:h-[500px] min-[1150px]:h-[550px] min-[1250px]:h-[600px] relative w-full">
+        <img src="/Hero.svg" alt="Herografik" class="w-[120%] h-[195%] object-fill object-center z-20 absolute max-w-5xl min-[850px]:w-[125%] min-[850px]:max-w-[70rem] min-[950px]:max-w-[75rem] min-[1050px]:max-w-[80rem] min-[1100px]:max-w-[120rem]">
+        <img src="/herobillede.png" alt="" class="w-full z-10 absolute object-cover max-h-[1000px] h-[140%] min-[550px]:h-[165%] min-[900px]:h-[165%] min-[940px]">
+        
+        <div class="z-30 flex justify-center items-center flex-col mt-8">
+            <h1 class="font-khand text-[82px] font-bold tracking-[5px] text-cream-500 drop-shadow-lg">ENGAGE</h1>
+            <h3 class="font-khand text-[22px] text-sand-500 font-bold tracking-[2px] -mt-8">Musikfestival på kastellet</h3>  
+            <Countdown></Countdown> 
+        </div>
+    </div>
+</body>
+</html>
 
 
 
-<!-- <div class="z-30">
-    <Button variant="secondary">KØB BILLET</Button></div> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="object-fill flex items-center -mt-7 justify-center xl:h-[620px] min-[500px]:h-[250px] min-[650px]:h-[300px] min-[650px]:mt-0 min-[750px]:h-[350px] min-[850px]:h-[400px] min-[950px]:h-[450px] min-[1050px]:h-[500px] min-[1150px]:h-[550px] min-[1250px]:h-[600px] relative w-full">
+        <img src="/Hero.svg" alt="Herografik" class="w-[120%] h-[195%] object-fill object-center z-20 absolute max-w-5xl min-[850px]:w-[125%] min-[850px]:max-w-[70rem] min-[950px]:max-w-[75rem] min-[1050px]:max-w-[80rem] min-[1100px]:max-w-[120rem]">
+        <img src="/herobillede.png" alt="" class="w-full z-10 absolute object-cover overflow-hidden max-h-[1000px] h-[140%] min-[550px]:h-[165%] min-[900px]:h-[165%] min-[940px]">
+        
+        <div class="z-30 flex justify-center items-center flex-col mt-8">
+            <h1 class="font-khand text-[82px] font-bold tracking-[5px] text-cream-500 drop-shadow-lg">ENGAGE</h1>
+            <h3 class="font-khand text-[22px] text-sand-500 font-bold tracking-[2px] -mt-8">Musikfestival på kastellet</h3>  
+            <Countdown></Countdown> 
+        </div>
+    </div>
+</body>
+</html>
+
+
+<style>
+    body {
+        overflow: hidden;
+    }
+</style> -->
