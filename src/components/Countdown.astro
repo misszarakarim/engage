@@ -1,0 +1,58 @@
+<section class="p-4 mx-6 rounded-[18px] md:mx-20 md:flex flex-col items-center justify-center -mt-6">
+    <div class="text-center">
+        <div id="countdown" class="flex justify-center space-x-6 text-sand-500 font-bold font-khand text-[16px] mt-4">
+            <div class="flex flex-col items-center">
+                <span id="days" class="text-[16px]"></span>
+                <span>Dage</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span id="hours" class="text-[16px]"></span>
+                <span>Timer</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span id="minutes" class="text-[16px]"></span>
+                <span>Minutter</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span id="seconds" class="text-[16px]"></span>
+                <span>Sekunder</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Sæt datoen vi tæller ned til
+        var countDownDate = new Date("Jun 7, 2024 00:00:00").getTime();
+
+        // Opdater nedtællingen hvert sekund
+        var countdownFunction = setInterval(function() {
+
+            // Få dagens dato og tid
+            var now = new Date().getTime();
+
+            // Find afstanden mellem nu og nedtællingsdatoen
+            var distance = countDownDate - now;
+
+            // Tidsberegninger for dage, timer, minutter og sekunder
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Vis resultatet i elementerne med de tilsvarende ids
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+            // Hvis nedtællingen er slut, skriv noget tekst
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "Festivalen er startet!";
+            }
+        }, 1000);
+    });
+</script>
