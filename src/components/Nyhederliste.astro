@@ -2,12 +2,12 @@
 import Button from "./Button.astro"
 ---
 
-<section>
+<section class="mt-20 mb-20 min-[600px]:mt-[10rem] min-[850]:mt-[15rem] min-[1000px]:mt-[20rem]">
     <article>
 <section x-data="{ allenyheder: [] }"
 x-init="allenyheder = await (await fetch('nyheder.json')).json(); allenyheder.reverse();"
 class="">
-<h2 class="flex items-center justify-center font-khand text-rod-500 font-bold tracking-[5px] text-[34px]">Nyheder</h2>
+<h2 class="flex items-center justify-center font-khand text-rod-500 font-bold tracking-[5px] text-[34px] min-[1000px]:text-[64px]">Nyheder</h2>
 <div class="flex flex-col space-y-[30px] items-center justify-center">
 <template x-for="nyheder in allenyheder" :key="nyheder.id">
     <div class="bg-sand-500 mx-24 rounded-[18px]  min-[900px]:mx-4 min-[900px]:max-w-[1200px]">
