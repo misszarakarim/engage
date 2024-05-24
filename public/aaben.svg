@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.02 127.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b95a36;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 13px;
+      }
+
+      .cls-2 {
+        fill: #cac0b5;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-3, .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: #7ea691;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6 {
+        stroke-width: 2px;
+      }
+
+      .cls-7 {
+        fill: #b84133;
+        font-family: ArialRoundedMTBold, 'Arial Rounded MT Bold';
+        font-size: 23.07px;
+        letter-spacing: .1em;
+      }
+
+      .cls-4 {
+        fill: #97867a;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-5" d="M105.81,60.1C74.6,24.97,55.01,2.26,55.01,2.26"/>
+    <path class="cls-5" d="M4.21,60.1C35.42,24.97,55.01,2.26,55.01,2.26"/>
+    <rect class="cls-2" y="57.65" width="110.02" height="69.81" rx="4.53" ry="4.53"/>
+    <text class="cls-1" transform="translate(37.01 79.63)"><tspan x="0" y="0">VI HAR</tspan></text>
+    <text class="cls-7" transform="translate(20.39 108.14)"><tspan x="0" y="0">ÅBEN</tspan></text>
+    <rect class="cls-6" x="7.54" y="63.63" width="96.84" height="57.85" rx="4.53" ry="4.53"/>
+    <line class="cls-3" x1="4.53" y1="57.65" x2="53.15" y2="7.67"/>
+    <circle class="cls-4" cx="55.01" cy="4.72" r="4.72"/>
+  </g>
+</svg>

@@ -1,0 +1,313 @@
+---
+import Button from "./Button.astro";
+import "animate.css";
+---
+
+<!-- 
+<style>
+  .offset-1 {
+    margin-top: 1rem;
+  }
+  .offset-2 {
+    margin-top: 4rem;
+  }
+  .offset-3 {
+    margin-top: 3rem;
+  }
+</style>
+
+<body>
+  <div class="grid grid-cols-2 auto-rows-min gap-4 p-4">
+    <div class="bg-blue-500 p-4">Item 1</div>
+    <div class="bg-green-500 p-4">Item 2</div>
+    <div class="bg-red-500 p-4 offset-3">Item 3</div>
+    <div class="bg-yellow-500 p-4 offset-1">Item 4</div>
+    <div class="bg-purple-500 p-4 offset-2">Item 5</div>
+    <div class="bg-pink-500 p-4 offset-3">Item 6</div>
+  </div>
+  -->
+<style>
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 4rem; /* Adjust this value to move the line further down */
+    bottom: 0;
+    width: 2px;
+    background-color: #c7522a;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 767px) {
+    /* Adjust breakpoint as needed */
+    .timeline::before {
+      display: none;
+    }
+  }
+</style>
+
+<body class="relative">
+  <article
+    class="mx-6 py-6 md:grid md:grid-cols-2 md:auto-rows-min md:gap-40 md:mx-60 timeline relative"
+  >
+    <!--1968 1 -->
+
+    <div class="pb-20 md:mt-0 relative">
+      <h4
+        class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
+      >
+        1968
+        <br />
+        De blå baretter
+      </h4>
+
+      <p
+        class="font-anek text-greyscale-950 tracking-[2px] text-[16px] lg:text-[20px] pb-6"
+      >
+        De Blå Baretter blev stiftet den 26. oktober 1968 af en gruppe veteraner
+        fra FN-missionen i Gaza, under navnet ”FN-Soldaterforeningen De Blå
+        Baretter” under følgende citat ”Til ære for den velorganiserede indsats
+        af danske soldater, observatører og politifolk i FN´s fredsbevarende
+        styrker”.
+      </p>
+      <img
+        src="barret.svg"
+        alt=""
+        class="mx-auto block w-32 md:w-[250px] mt-10 md:mt-0 md:mb-4 rotate-12"
+      />
+    </div>
+
+    <!--2017 2 -->
+
+    <div class="pb-20 md:p-4 md:mt-48">
+      <h4
+        class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
+      >
+        2017
+        <br />
+        ENGAGE bliver til
+      </h4>
+      <p
+        class="font-anek text-greyscale-950 tracking-[2px] text-[16px] lg:text-[20px] mb-10 pb-6"
+      >
+        Festivalen skal give veteraner noget at mødes og arbejde sammen om,
+        ligesom tanken er at åbne miljøet, så alle andre kan blive klogere på,
+        hvordan det er at være udsendt med Dannebrog på skulderen. Eksempelvis
+        skal der være meeting points for alle, der har været i eksempelvis
+        Afghanistan, hvor veteraner kan tale med ligesindede, og hvor lægmænd
+        kan stille spørgsmål.
+      </p>
+
+      <img
+        src="engageblivertil.svg"
+        alt=""
+        class="mx-auto block w-60 md:w-[500px]"
+      />
+    </div>
+
+    <!-- 2017  3-->
+    <div class="pb-20 md:p-4 md:mt-[-24rem]">
+      <h4
+        class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
+      >
+        2017
+        <br />
+        Begyndelsen på en tradition
+      </h4>
+      <p
+        class="font-anek text-greyscale-950 tracking-[2px] text-[16px] lg:text-[20px] pb-6"
+      >
+        ENGAGE åbner for første gang dørene til en endags festival der afholdes
+        på Refshaleøen med kunstnere som Fallulah, Magtens Korridorer og Sort
+        Sol
+      </p>
+
+      <img
+        src="aaben.svg"
+        alt=""
+        class="mx-auto block w-44 md:w-64 animate__animated animate__swing animate__infinite animate__slower animate__delay-2s"
+      />
+    </div>
+
+    <!-- 2018  4-->
+    <div class="pb-20 md:p-4 md:mt-[-1rem]">
+      <h4
+        class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
+      >
+        2018
+        <br />
+        Traditionen styrkes
+      </h4>
+      <p
+        class="font-anek text-greyscale-950 tracking-[2px] text-[16px] lg:text-[20px] pb-6"
+      >
+        Efter festivalens succes i 2017 slår ENGAGE endnu engang dørene op til
+        endags festival på Refshaleøen med kunstnere som Infernal, Aura og Poul
+        Krebs
+      </p>
+
+      <img
+        src="node22.svg"
+        alt=""
+        class="mx-auto block w-44 md:w-[300px] animate__animated animate__tada animate__infinite animate__slower"
+      />
+    </div>
+
+    <!-- 2019  5-->
+    <div class="pb-20 md:p-4 md:mt-[-20rem]">
+      <h4
+        class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
+      >
+        2019
+        <br />
+        Festen fortsætter
+      </h4>
+      <p
+        class="font-anek text-greyscale-950 tracking-[2px] text-[16px] lg:text-[20px] pb-6"
+      >
+        ENGAGE åbner dørene op på Refshaleøen for 3 gang til et brag af en fest
+        med kunstnere som bla. DAD, Clara og The Sand men
+      </p>
+
+      <img src="reffen.svg" alt="" class="mx-auto block w-44 md:w-[280px]" />
+    </div>
+
+    <!-- 2020  6-->
+    <div class="pb-20 md:p-4 md:mt-[-2rem]">
+      <h4
+        class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
+      >
+        2020
+        <br />
+        ENGAGE rykker online
+      </h4>
+      <p
+        class="font-anek text-greyscale-950 tracking-[2px] text-[16px] lg:text-[20px] pb-6"
+      >
+        Coronaen kommer men stopper ikke ENGAGE! Dj Martin Jensen laver en
+        online koncert fra et krigsskib
+      </p>
+
+      <img
+        src="pc.svg"
+        alt=""
+        class="mx-auto block w-44 md:w-[500px] animate__flipInX animate__animated animate__5s animate__slower"
+      />
+    </div>
+
+    <!-- 2020 2 7-->
+    <div class="pb-20 md:p-4 md:mt-[-15rem]">
+      <h4
+        class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
+      >
+        2020
+        <br />
+        ENGAGE bliver til LYST
+      </h4>
+      <p
+        class="font-anek text-greyscale-950 tracking-[2px] text-[16px] lg:text-[20px] pb-6"
+      >
+        Coronaen er faldet lidt til ro, og derfor laver ENGAGE en mindre
+        festival der afholdes på kastellet. Koncerten foregår siddende på tæpper
+        og overholder alle corona restriktionerne
+      </p>
+
+      <img
+        src="lyst.svg"
+        alt=""
+        class="mx-auto block w-60 md:w-[900px] md:l-[900px]"
+      />
+    </div>
+
+    <!-- 2021  8-->
+    <div class="pb-20 md:p-4 md:mt-[-1rem]">
+      <h4
+        class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
+      >
+        2021
+        <br />
+        Stærkt tilbage
+      </h4>
+      <p
+        class="font-anek text-greyscale-950 tracking-[2px] text-[16px] lg:text-[20px] pb-6"
+      >
+        ENGAGE vender stærkt tilbage efter corona og udvider nu til en 2 dages
+        festival i Kastellet, samt en 1 dags festival på Skive kaserne med
+        kunstnere som Andreas Odbjerg, Dopha og tv2
+      </p>
+
+      <img src="strong.svg" alt="" class="mx-auto block w-44" />
+    </div>
+
+    <!-- 2022 9 -->
+    <div class="pb-20 md:p-4 md:mt-[-20rem]">
+      <h4
+        class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
+      >
+        2022
+        <br />
+        Femårs jubilæum
+      </h4>
+      <p
+        class="font-anek text-greyscale-950 tracking-[2px] text-[16px] lg:text-[20px] pb-6"
+      >
+        ENGAGE har rundet 5 år og det fejres med en to dags festival på
+        Kastellet med kunstnere som Blæst, Mads Langer og Love Shop
+      </p>
+
+      <img src="5aar.svg" alt="" class="mx-auto block w-44" />
+    </div>
+
+    <!-- 2023 10 -->
+    <div class="pb-20 md:mt-[-1rem]">
+      <h4
+        class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px] pb-6"
+      >
+        2023
+        <br />
+        Fortsat succes
+      </h4>
+      <p
+        class="font-anek text-greyscale-950 tracking-[2px] text-[16px] lg:text-[20px]"
+      >
+        ENGAGE har fortsat succes som en to dages festival på kastellet og
+        bliver gæstet af kunstnere som L.O.C, Swan Lee og Barselona
+      </p>
+
+      <img src="kirke2.svg" alt="" class="mx-auto block w-44" />
+    </div>
+
+    <!-- 2024 11 -->
+    <div class="pb-20 md:mt-[-20rem]">
+      <h4
+        class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
+      >
+        2024
+        <br />
+        Vi glæder os
+      </h4>
+      <p
+        class="font-anek text-greyscale-950 tracking-[2px] text-[16px] lg:text-[20px] pb-6"
+      >
+        ENGAGE afholden igen i år over to dage i de smukke omgivelser på
+        Kastellet! køb din billet og se programmet her på hjemmesiden! vi glæder
+        os til at se dig!
+      </p>
+      <Button> KØB BILLET</Button>
+    </div>
+  </article>
+</body>
+<style>
+  .animate__animated.animate__swing {
+    --animate-duration: 4s;
+  }
+  .animate__animated.animate__shakeY {
+    --animate-duration: 4s;
+  }
+  .animate__animated.animate__tada {
+    --animate-duration: 4s;
+  }
+
+  .animate__animated.animate__flipInX {
+    --animate-duration: 2s;
+  }
+</style>
