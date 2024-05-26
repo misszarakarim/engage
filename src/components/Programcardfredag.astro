@@ -1,4 +1,5 @@
-<section>
+
+ <section class="">
     <article class="py-12">
         <section x-data="{ alleprogramfredag: [] }"
                  x-init="alleprogramfredag = await (await fetch('programfredag.json')).json(); alleprogramfredag.reverse();"
@@ -7,11 +8,11 @@
                 <h2 class="font-khand text-[34px] font-bold tracking-[5px] text-rod-500  min-[950px]:text-[65px]">Fredag 7/6</h2>
                 <h5 class="font-anek text-[16px] text-rod-500 tracking-[2px] mb-20 min-[950px]:text-[25px]">Der bliver løbende opdateret angående artister</h5>
             </div>
-            <section class="flex justify-center items-center">
+            <section class="flex justify-center items-center jsani1">
                 <div class="w-full max-w-screen-xl mx-auto">
                     <section class="flex flex-wrap justify-center gap-12">
                         <template x-for="programfredag in alleprogramfredag" :key="programfredag.id">
-                            <div class="bg-sand-500 rounded-[18px] mb-9 w-[350px]">
+                            <div class="bg-sand-500 rounded-[18px] mb-9 w-[350px] ">
                                 <article class="grid grid-cols-2">
                                     <img :src="programfredag.kunsterbilled" :alt="programfredag.kunsterbilledalt" class="-mt-[20%] -ml-[20%]" />
                                     <h4 x-text="programfredag.kunster" class="place-self-center text-rod-500 font-khand font-bold text-[30px] tracking-[5px]"></h4>
@@ -29,3 +30,21 @@
         </section>
     </article>
 </section>
+
+
+
+<script>
+
+
+    import { inView } from "motion";
+    
+    const jsani1 = document.querySelector(".jsani1");
+    
+    inView(jsani1, () => {
+      jsani1.classList.add("animate__animated", "animate__fadeInDown");
+    });
+    
+    
+    
+    
+    </script>
