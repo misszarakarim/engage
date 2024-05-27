@@ -1,13 +1,44 @@
 ---
 const { variant="primary"} = Astro.props;
 
-const buttonStyling = "bg-blo-500 font-khand text-cream-500 font-bold"
+const buttonStyling = "bg-blo-500 font-khand text-cream-500 font-bold close"
 
 const variantClasses = {
     "primary": "rounded-[7px] py-1 px-4 tracking-[2px] text-[13px] min-[950px]:text-[20px] min-[950px]:px-[30px]",
-    "secondary": "text-[40px] px-8 py-1 rounded-[7px] tracking-[3px] min-[950px]:text-[50px] ",
+    "secondary": "text-[40px] px-8 py-1 rounded-[7px] tracking-[3px] min-[950px]:text-[50px] close",
     "tertiary":"text-[19px] py-3 px-3 rounded-[7px] tracking-[2px] min-[950px]:text-[30px]"
 };
 ---
+<button class:list={[buttonStyling, variantClasses[variant],]}>
+  <slot />
+</button>
 
-<button class:list={[buttonStyling, variantClasses[variant],]}><slot /></button>
+
+
+<style>
+
+  :root {
+    --hover: #C7522A; /* Define the hover color */
+  }
+  
+  .close:hover,
+  .close:focus {
+    box-shadow: 
+      inset -4.5em 0 0 0 var(--hover),
+      inset 4.5em 0 0 0 var(--hover);  
+  }
+  
+  button {  
+
+    transition: 0.25s;
+    
+    &:hover,
+    &:focus { 
+      border-color: var(--hover);
+     
+    }
+  }
+  
+
+  </style>
+  
