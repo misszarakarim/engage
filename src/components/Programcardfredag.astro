@@ -1,4 +1,6 @@
 
+ 
+ 
  <section class="">
     <article class="py-12">
         <section x-data="{ alleprogramfredag: [] }"
@@ -8,7 +10,7 @@
                 <h2 class="font-khand text-[34px] font-bold tracking-[5px] text-rod-500  min-[950px]:text-[65px]">Fredag 7/6</h2>
                 <h5 class="font-anek text-[16px] text-rod-500 tracking-[2px] mb-20 min-[950px]:text-[25px]">Der bliver løbende opdateret angående artister</h5>
             </div>
-            <section class="flex justify-center items-center jsani1">
+            <section class="flex justify-center items-center jsani1" x-data="{ openbeskrivelselang: false }">
                 <div class="w-full max-w-screen-xl mx-auto">
                     <section class="flex flex-wrap justify-center gap-12">
                         <template x-for="programfredag in alleprogramfredag" :key="programfredag.id">
@@ -18,9 +20,15 @@
                                     <h4 x-text="programfredag.kunster" class="place-self-center text-rod-500 font-khand font-bold text-[30px] tracking-[5px]"></h4>
                                 </article>
                                 <p x-text="programfredag.beskrivelse" class="text-[16px] pt-6 px-8 font-anek tracking-[2px]">                                
-                                    <span x-text="programfredag.beskrivelselang" class="read-more-text"></span>
+                                    
 </p>
-<span class="read-more-btn">Læs mere...</span>
+<div x-show="openbeskrivelselang"><div x-text="programfredag.beskrivelselang" class="px-8 read-more-btn font-anek tracking-[2px] text-[16px]"></div></div>
+
+
+<span class="px-8" x-on:click="openbeskrivelselang = !openbeskrivelselang">
+    <button class="bg-blo-500 font-khand text-cream-500 close font-bold rounded-[7px] py-1 px-4 tracking-[2px] text-[13px] min-[950px]:text-[20px] min-[950px]:px-[30px]" x-text="openbeskrivelselang ? 'LÆS MINDRE' : 'LÆS MERE'"></button>
+</span>
+
                                 <div class="flex flex-row place-self-center px-8 py-12 justify-center text-rod-500 font-khand font-bold text-[30px] tracking-[2px] space-x-6">
                                     <span>Spiller</span>
                                     <span x-text="programfredag.tidspunkt"></span>
@@ -34,11 +42,31 @@
 </section>
 
 <style>
- .read-more-text--show {
-display: inline;
-}
-</style>
 
+    :root {
+      --hover: #C7522A; /* Define the hover color */
+    }
+    
+    .close:hover,
+    .close:focus {
+      box-shadow: 
+        inset -4.5em 0 0 0 var(--hover),
+        inset 4.5em 0 0 0 var(--hover);  
+    }
+    
+    button {  
+  
+      transition: 0.25s;
+      
+      &:hover,
+      &:focus { 
+        border-color: var(--hover);
+       
+      }
+    }
+    
+  
+    </style>
 
 <script>
 
@@ -55,3 +83,6 @@ display: inline;
     
     
     </script>
+
+
+
