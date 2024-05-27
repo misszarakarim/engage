@@ -17,11 +17,13 @@
                                     <img :src="programfredag.kunsterbilled" :alt="programfredag.kunsterbilledalt" class="-mt-[20%] -ml-[20%]" />
                                     <h4 x-text="programfredag.kunster" class="place-self-center text-rod-500 font-khand font-bold text-[30px] tracking-[5px]"></h4>
                                 </article>
-                                <p x-text="programfredag.beskrivelse" class="text-[16px] pt-6 px-8 font-anek tracking-[2px]"></p>
+                                <p x-text="programfredag.beskrivelse" class="text-[16px] pt-6 px-8 font-anek tracking-[2px]">                                
+                                    <span x-text="programfredag.beskrivelselang" class="read-more-text"></span>
+</p>
+<span class="read-more-btn">Læs mere...</span>
                                 <div class="flex flex-row place-self-center px-8 py-12 justify-center text-rod-500 font-khand font-bold text-[30px] tracking-[2px] space-x-6">
                                     <span>Spiller</span>
                                     <span x-text="programfredag.tidspunkt"></span>
-                                </div>
                             </div>
                         </template>
                     </section>
@@ -31,6 +33,11 @@
     </article>
 </section>
 
+<style>
+ .read-more-text--show {
+display: inline;
+}
+</style>
 
 
 <script>

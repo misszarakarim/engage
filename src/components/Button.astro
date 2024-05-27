@@ -5,9 +5,49 @@ const buttonStyling = "bg-blo-500 font-khand text-cream-500 font-bold"
 
 const variantClasses = {
     "primary": "rounded-[7px] py-1 px-4 tracking-[2px] text-[13px] min-[950px]:text-[20px] min-[950px]:px-[30px]",
-    "secondary": "text-[40px] px-8 py-1 rounded-[7px] tracking-[3px] min-[950px]:text-[50px] ",
+    "secondary": "text-[40px] px-8 py-1 rounded-[7px] tracking-[3px] min-[950px]:text-[50px] close",
     "tertiary":"text-[19px] py-3 px-3 rounded-[7px] tracking-[2px] min-[950px]:text-[30px]"
 };
 ---
+<button class:list={[buttonStyling, variantClasses[variant]]} style="--hover: #C7522A;" @mouseover="animateClose" @mouseout="animateSlide">
+  <slot />
+</button>
 
-<button class:list={[buttonStyling, variantClasses[variant],]}><slot /></button>
+<style>
+@keyframes closeAnimation {
+  0% {
+    box-shadow: inset 0 0 0 0 var(--hover);
+  }
+  100% {
+    box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+  }
+}
+
+@keyframes slideAnimation {
+  0% {
+    box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+  }
+  100% {
+    box-shadow: inset 0 0 0 0 var(--hover);
+  }
+}
+
+button:hover,
+button:focus {
+  animation: closeAnimation 0.25s forwards;
+}
+
+button.mouseout {
+  animation: slideAnimation 0.25s forwards;
+}
+</style>
+
+<script>
+function animateClose(event) {
+  event.target.style.animation = 'closeAnimation 0.25s forwards';
+}
+
+function animateSlide(event) {
+  event.target.style.animation = 'slideAnimation 0.25s forwards';
+}
+</script> 
