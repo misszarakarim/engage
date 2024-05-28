@@ -10,10 +10,11 @@
                 <h2 class="font-khand text-[34px] font-bold tracking-[5px] text-rod-500  min-[950px]:text-[65px]">Fredag 7/6</h2>
                 <h5 class="font-anek text-[16px] text-rod-500 tracking-[2px] mb-20 min-[950px]:text-[25px]">Der bliver løbende opdateret angående artister</h5>
             </div>
-            <section class="flex justify-center items-center jsani1" x-data="{ openbeskrivelselang: false }">
+
+            <section class="flex justify-center items-center jsani1">
                 <div class="w-full max-w-screen-xl mx-auto">
                     <section class="flex flex-wrap justify-center gap-12">
-                        <template x-for="programfredag in alleprogramfredag" :key="programfredag.id">
+                        <template x-for="programfredag in alleprogramfredag" :key="programfredag.id" x-data="{ openbeskrivelselang: false }">
                             <div class="bg-sand-500 rounded-[18px] mb-9 w-[350px] ">
                                 <article class="grid grid-cols-2">
                                     <img :src="programfredag.kunsterbilled" :alt="programfredag.kunsterbilledalt" class="-mt-[20%] -ml-[20%]" />
