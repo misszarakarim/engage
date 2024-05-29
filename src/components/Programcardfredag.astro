@@ -14,7 +14,7 @@
             <section class="flex justify-center items-center jsani1">
                 <div class="w-full max-w-screen-xl mx-auto">
                     <section class="flex flex-wrap justify-center gap-12 items-stretch">
-                        <template x-for="programfredag in alleprogramfredag" :key="programfredag.id" x-data="{ open: false }">
+                        <template x-for="programfredag in alleprogramfredag" :key="programfredag.id">
                             <div class="bg-sand-500 rounded-[18px] mb-9 w-[350px] flex flex-col justify-between">
                                 <article class="grid grid-cols-2">
                                     <img :src="programfredag.kunsterbilled" :alt="programfredag.kunsterbilledalt" class="-mt-[20%] -ml-[20%]" />
