@@ -1,55 +1,91 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 ---
-  <nav class="p-4 z-50 relative">
-        <div class="container mx-auto flex justify-between items-center">
-            
-            <!-- Logo -->
-           
-          <a href="/"><div class="text-blo-500 font-bold font-khand text-[24px]">ENGAGE FESTIVAL</div></a> 
 
-            <!-- Teksten i midten -->
-            <div class="hidden md:block text-blo-500 font-bold font-khand text-[24px]">7+8 JUNI</div>
+<nav class="p-4 z-50 relative">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo -->
 
-            <!-- Shopping cart ikon -->
-            <div class="flex items-center space-x-4">
-                <div class="text-blo-500 font-bold font-khand text-[24px]">
-                     <img src="/sc1.svg" class="mb-[13%]">
-                </div>
+    <a href="/"
+      ><div class="text-blo-500 font-bold font-khand text-[24px]">
+        ENGAGE FESTIVAL
+      </div></a
+    >
 
-                <!-- Burger menu ikon -->
-                <div x-data="{ open: false }">
-                    <button @click="open = !open" class="text-blo-500 focus:outline-none">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
+    <!-- Teksten i midten -->
+    <div class="hidden md:block text-blo-500 font-bold font-khand text-[24px]">
+      7+8 JUNI
+    </div>
 
-                    <!-- Dropdown menu -->
-                    <div x-show="open" @click.away="open = false" class="absolute top-[73px] right-[20px] bg-sand-500 w-[26rem] rounded-lg shadow-lg py-2 text-center font-khand font-bold text-[19px] md:top-[96px] md:right-[20px] md:w-[12rem] md:text-[22px] z-50">
-                        <a href="/" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">FORSIDE</a>
-                        <a href="/nyheder" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">NYHEDER</a>
-                        <a href="/program" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">PROGRAM</a>
-                        <a href="/omos" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">OM OS</a>
-                        <a href="/billet" class="block px-4 py-2 text-rod-500 hover:bg-sand-400">BILETTER</a>
-                    </div>
-                </div>
-            </div>
+    <!-- Shopping cart ikon -->
+    <div class="flex items-center space-x-4">
+      <div class="text-blo-500 font-bold font-khand text-[24px]">
+        <img src="sc1.svg" class="mb-[13%]" />
+      </div>
+
+      <!-- Burger menu ikon -->
+      <div x-data="{ open: false }">
+        <button @click="open = !open" class="text-blo-500 focus:outline-none">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div
+          x-show="open"
+          @click.away="open = false"
+          class="absolute top-[73px] right-[20px] bg-sand-500 w-[26rem] rounded-lg shadow-lg py-2 text-center font-khand font-bold text-[19px] md:top-[96px] md:right-[20px] md:w-[12rem] md:text-[22px] z-50"
+        >
+          <a href="/" class="block px-4 py-2 text-rod-500 hover:bg-cream-400"
+            >FORSIDE</a
+          >
+          <a
+            href="/nyheder"
+            class="block px-4 py-2 text-rod-500 hover:bg-cream-500">NYHEDER</a
+          >
+          <a
+            href="/program"
+            class="block px-4 py-2 text-rod-500 hover:bg-cream-500">PROGRAM</a
+          >
+          <a
+            href="/omos"
+            class="block px-4 py-2 text-rod-500 hover:bg-cream-500">OM OS</a
+          >
+          <a
+            href="/billet"
+            class="block px-4 py-2 text-rod-500 hover:bg-cream-500">BILETTER</a
+          >
         </div>
-    </nav>
-
-
+      </div>
+    </div>
+  </div>
+</nav>
+<style>
+  .nav-gradient {
+    background: linear-gradient(to bottom, #f8d69e 40%, #f8d69e 0%);
+  }
+</style>
 <script>
-
-    class Login extends HTMLElement {
-        constructor() {
-          super();
-          this.attachShadow({
-            mode: "open"
-          }); //apparently slots only work with the shadow dom?
-        }
-        connectedCallback() {
-          this.html = `<style>
+  class Login extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({
+        mode: "open",
+      }); //apparently slots only work with the shadow dom?
+    }
+    connectedCallback() {
+      this.html = `<style>
             /****** LOGIN MODAL ******/
             #login-modal {
                 background:black;
@@ -129,34 +165,32 @@ import MainLayout from "../layouts/MainLayout.astro";
               </div>
             </div>
           </div>`;
-          this.render();
-      
-          this.shadowRoot.querySelector("form").addEventListener("submit", e => {
-            e.preventDefault();
-            if (
-              this.shadowRoot.querySelector("input[name=pass]").value === "kea"
-            ) {
-              document.querySelector("#totally-delete-me").remove();
-              localStorage.setItem("iform-totally-logged-in", true);
-            }
-          });
-        }
-        render() {
-          this.shadowRoot.innerHTML = this.html;
-        }
-      }
-      customElements.define("iform-login", Login);
-      window.addEventListener("load", () => {
-        if (!localStorage.getItem("iform-totally-logged-in")) {
-          const div = document.createElement("div");
-          div.id = "totally-delete-me";
-          div.style.width = "100vw";
-          div.style.height = "100vh";
-          div.style.position = "fixed";
-          div.style.zIndex = "9999";
-      
-          div.innerHTML = "<iform-login />";
-          document.body.prepend(div);
+      this.render();
+
+      this.shadowRoot.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (this.shadowRoot.querySelector("input[name=pass]").value === "kea") {
+          document.querySelector("#totally-delete-me").remove();
+          localStorage.setItem("iform-totally-logged-in", true);
         }
       });
+    }
+    render() {
+      this.shadowRoot.innerHTML = this.html;
+    }
+  }
+  customElements.define("iform-login", Login);
+  window.addEventListener("load", () => {
+    if (!localStorage.getItem("iform-totally-logged-in")) {
+      const div = document.createElement("div");
+      div.id = "totally-delete-me";
+      div.style.width = "100vw";
+      div.style.height = "100vh";
+      div.style.position = "fixed";
+      div.style.zIndex = "9999";
+
+      div.innerHTML = "<iform-login />";
+      document.body.prepend(div);
+    }
+  });
 </script>
