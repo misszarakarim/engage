@@ -4,7 +4,7 @@
  <section class="">
     <article class="pt-12 mb-32">
         <section x-data="{ alleprogramfredag: [] }"
-                 x-init="alleprogramfredag = await (await fetch('programfredag.json')).json(); alleprogramfredag.reverse();"
+                 x-init="alleprogramfredag = await (await fetch('../programfredag.json')).json(); alleprogramfredag.reverse();"
                  class="">
             <div class="flex justify-center items-center flex-col mb-12">
                 <h2 class="font-khand text-[34px] font-bolD text-rod-500  min-[950px]:text-[65px] font-bold">Fredag 7/6</h2>
