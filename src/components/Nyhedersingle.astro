@@ -3,15 +3,16 @@ const { overskrift, imgSrc } = Astro.props;
 ---
 
 <section
-  class="bg-sand-500 p-4 mx-6 rounded-[18px] min-[800px]:mx-[6rem] lg:mx-[10rem] md:flex flex-col items-center justify-center"
+  class="bg-sand-500 mb-32 p-4 mx-[2rem] sm:mx-[7rem] md:mx-[7rem] lg:mx-[13rem] xl:mx-[20rem] 2xl:mx-[25rem] rounded-[18px] md:flex flex-col items-center justify-center "
 >
-  <img src={imgSrc} alt="" class="md:p-5" />
-  <h3 class="text-rod-500 font-bold text-[22px] font-khand mt-5 text-center min-[770px]:text-[24px] min-[962px]:text-[30px] min-[900px]:text-[30px] lg:text-[45px] md:flex flex-col items-start justify-start">
+  <img src={imgSrc} alt="" class="md:p-5" /> 
+  <h3 class="text-rod-500 font-bold text-[22px] font-khand mt-5 text-center sm:text-[24px] md:text-[35px] lg:text-[40px] xl:text-[45px] md:flex flex-col items-start justify-start sm:px-[2rem] md:px-[3rem] xl:px-[5rem]">
     {overskrift}
   </h3>
-  <div class="space-y-5 font-anek mt-5 md:p-5 md:text-[20]">
+  <div class="space-y-5 font-anek mt-5 md:text-[20px] sm:px-[2rem] md:px-[3rem] xl:px-[5rem] pb-8 px-2">
   <slot />
     </div>
+    </section>
 
 
 <!-- 
