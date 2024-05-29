@@ -2,66 +2,54 @@
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<nav class="p-4 z-50 relative">
-  <div class="container mx-auto flex justify-between items-center">
+<nav class="px-4 z-50 fixed w-full md:px-24 ">
+  <div class="container w-auto mx-auto flex items-center justify-between ">
     <!-- Logo -->
-
-    <a href="/"
-      ><div class="text-blo-500 font-bold font-khand text-[24px]">
-        ENGAGE FESTIVAL
-      </div></a
-    >
+    <a href="/">
+      <div class="text-blo-500 font-bold font-khand text-[24px]">ENGAGE FESTIVAL</div>
+    </a>
 
     <!-- Teksten i midten -->
     <div class="hidden md:block text-blo-500 font-bold font-khand text-[24px]">
       7+8 JUNI
     </div>
 
-    <!-- Shopping cart ikon -->
+    <!-- Shopping cart and burger menu -->
     <div class="flex items-center space-x-4">
       <div class="text-blo-500 font-bold font-khand text-[24px]">
-        <img src="sc1.svg" class="mb-[13%] " />
+        <img src="sc1.svg" class="mb-[13%]" />
       </div>
 
-      <!-- Burger menu ikon -->
+      <!-- Burger menu icon -->
       <div x-data="{ open: false }">
         <button @click="open = !open" class="text-blo-500 focus:outline-none">
-   <img src="burger.svg" alt="" class="w-8">
+          <img src="burger.svg" alt="" class="w-8">
         </button>
 
         <!-- Dropdown menu -->
         <div
           x-show="open"
           @click.away="open = false"
-          class="absolute top-[73px] right-[20px] bg-sand-500 w-[26rem] rounded-lg shadow-lg py-2 text-center font-khand font-bold text-[19px] md:top-[96px] md:right-[20px] md:w-[12rem] md:text-[22px] z-50"
+          class="absolute top-[73px] right-[20px] bg-sand-500 w-[26rem] rounded-lg shadow-lg py-2 text-center font-khand font-bold text-[19px] md:top-[69px] md:right-[20px] md:w-[12rem] md:text-[22px] z-50"
         >
-          <a href="/" class="block px-4 py-2 text-rod-500 hover:bg-cream-400"
-            >FORSIDE</a
-          >
-          <a
-            href="/nyheder"
-            class="block px-4 py-2 text-rod-500 hover:bg-cream-500">NYHEDER</a
-          >
-          <a
-            href="/program"
-            class="block px-4 py-2 text-rod-500 hover:bg-cream-500">PROGRAM</a
-          >
-          <a
-            href="/omos"
-            class="block px-4 py-2 text-rod-500 hover:bg-cream-500">OM OS</a
-          >
-          <a
-            href="/billet"
-            class="block px-4 py-2 text-rod-500 hover:bg-cream-500">BILETTER</a
-          >
+          <a href="/" class="block px-4 py-2 text-rod-500 hover:bg-cream-400">FORSIDE</a>
+          <a href="/nyheder" class="block px-4 py-2 text-rod-500 hover:bg-cream-500">NYHEDER</a>
+          <a href="/program" class="block px-4 py-2 text-rod-500 hover:bg-cream-500">PROGRAM</a>
+          <a href="/omos" class="block px-4 py-2 text-rod-500 hover:bg-cream-500">OM OS</a>
+          <a href="/billet" class="block px-4 py-2 text-rod-500 hover:bg-cream-500">BILETTER</a>
         </div>
       </div>
     </div>
   </div>
 </nav>
+
 <style>
   .nav-gradient {
     background: linear-gradient(to bottom, #f8d69e 40%, #f8d69e 0%);
+  }
+
+  .container {
+    max-width: 100%;
   }
 </style>
 <script>
