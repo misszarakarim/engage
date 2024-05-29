@@ -4,6 +4,8 @@ import Footer from "../components/Footer.astro";
 import "../styles/tailwind.css";
 import "animate.css";
 import Omoscard from "../components/Omoscard.astro";
+import Scroll from "../components/Scroll.astro";
+
 const { title } = Astro.props;
 ---
 
@@ -48,7 +50,7 @@ const { title } = Astro.props;
     <main>
       <slot />
     </main>
-
+<Scroll />
     <Footer />
   </body>
 </html>
