@@ -11,7 +11,7 @@
                 <h5 class="font-anek text-[16px] text-rod-500 mb-20 min-[950px]:text-[25px]">Der bliver løbende opdateret angående artister</h5>
             </div>
 
-            <section class="flex justify-center items-center jsani1">
+            <section class="flex justify-center items-center jsani2">
                 <div class="w-full max-w-screen-xl mx-auto">
                     <section class="flex flex-wrap justify-center gap-12 items-stretch">
                         <template x-for="programlordag in alleprogramlordag" :key="programlordag.id" x-data="{ open: false }">
@@ -70,10 +70,10 @@
 
     import { inView } from "motion";
     
-    const jsani1 = document.querySelector(".jsani1");
+    const jsani2 = document.querySelector(".jsani2");
     
-    inView(jsani1, () => {
-      jsani1.classList.add("animate__animated", "animate__fadeIn");
+    inView(jsani2, () => {
+      jsani2.classList.add("animate__animated", "animate__fadeIn");
     });
     
     
