@@ -11,7 +11,6 @@ import "animate.css";
 
     <div class="pb-10 md:pb-20 md:mt-0 relative a1">
       <h4
-        id="animated-header-left"
         class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
       >
         1968
@@ -37,11 +36,8 @@ import "animate.css";
 
     <!--2017 2 -->
 
-    <div
-      class="pb-10 md:pb-20 md:p-4 md:mt-48 animate__bounceInRight animate__animated a2"
-    >
+    <div class="pb-10 md:pb-20 md:p-4 md:mt-48 a2">
       <h4
-        id="animated-header-right"
         class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
       >
         2017
@@ -69,7 +65,6 @@ import "animate.css";
     <!-- 2017  3-->
     <div class="pb-10 md:pb-20 md:p-4 md:mt-[-24rem] a3">
       <h4
-        id="animated-header-left"
         class="font-khand text-rod-500 text-[19px] lg:text-[30px] font-bold mb-2 tracking-[2px]"
       >
         2017
@@ -201,7 +196,7 @@ import "animate.css";
       <img
         src="strong.svg"
         alt="garfik af en arm med tatovering hvor der står engage og omridset af kastellet"
-        class="mx-auto block w-44 md:w-[200px] animate__jackInTheBox animate__animated animate__infinite animate__slower"
+        class="mx-auto block w-44 md:w-[200px] animate__tada animate__animated animate__infinite animate__slower"
       />
     </div>
 
@@ -224,7 +219,7 @@ import "animate.css";
       <img
         src="5aar.svg"
         alt="grafik af en lagkage med et lys med et 5 tal"
-        class="mx-auto block w-44"
+        class="mx-auto block w-44 md:w-[250px]"
       />
     </div>
 
@@ -245,7 +240,7 @@ import "animate.css";
       </p>
 
       <img
-        src="kirken.svg"
+        src="kirkekoncert.svg"
         alt="grafik af kastelskirken med engagescene"
         class="mx-auto block w-44 md:w-[300px]"
       />
@@ -267,7 +262,11 @@ import "animate.css";
         Kastellet! køb din billet og se programmet her på hjemmesiden! vi glæder
         os til at se dig!
       </p>
-      <Button> KØB BILLET</Button>
+      <div
+        class="mx-auto block w-44 relative animate__jello animate__animated animate__infinite animate__slower"
+      >
+        <Button> KØB BILLET</Button>
+      </div>
     </div>
   </article>
 </body>
