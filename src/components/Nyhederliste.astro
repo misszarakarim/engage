@@ -2,7 +2,7 @@
 import Button from "./Button.astro"
 ---
 
-<section class="mt-20 mb-20 min-[600px]:mt-[10rem] min-[850]:mt-[15rem] min-[1000px]:mt-[20rem]">
+<section class="mt-20 mb-32 min-[600px]:mt-[10rem] min-[850]:mt-[15rem] min-[1000px]:mt-[20rem]">
     <article>
 <section x-data="{ allenyheder: [] }"
 x-init="allenyheder = await (await fetch('nyheder.json')).json(); allenyheder.reverse();"

@@ -1,26 +1,34 @@
-<section>
-    <article class="py-12">
+
+ 
+ 
+ <section class="">
+    <article class="pt-12 mb-32">
         <section x-data="{ alleprogramlordag: [] }"
                  x-init="alleprogramlordag = await (await fetch('programlordag.json')).json(); alleprogramlordag.reverse();"
                  class="">
             <div class="flex justify-center items-center flex-col mb-12">
-                <h2 class="font-khand text-[34px] font-bold tracking-[5px] text-rod-500 min-[950px]:text-[65px]">Fredag 7/6</h2>
-                <h5 class="font-anek text-[16px] text-rod-500 tracking-[2px] mb-20 min-[950px]:text-[25px]">Der bliver løbende opdateret angående artister</h5>
+                <h2 class="font-khand text-[34px] font-bolD text-rod-500  min-[950px]:text-[65px] font-bold">Lørdag 8/6</h2>
+                <h5 class="font-anek text-[16px] text-rod-500 mb-20 min-[950px]:text-[25px]">Der bliver løbende opdateret angående artister</h5>
             </div>
-            <section class="flex justify-center items-center jsani2">
+
+            <section class="flex justify-center items-center jsani1">
                 <div class="w-full max-w-screen-xl mx-auto">
-                    <section class="flex flex-wrap justify-center gap-12">
-                        <template x-for="programlordag in alleprogramlordag" :key="programlordag.id">
-                            <div class="bg-sand-500 rounded-[18px] mb-9 w-[350px]">
+                    <section class="flex flex-wrap justify-center gap-12 items-stretch">
+                        <template x-for="programlordag in alleprogramlordag" :key="programlordag.id" x-data="{ open: false }">
+                            <div class="bg-sand-500 rounded-[18px] mb-9 w-[350px] flex flex-col justify-between">
                                 <article class="grid grid-cols-2">
                                     <img :src="programlordag.kunsterbilled" :alt="programlordag.kunsterbilledalt" class="-mt-[20%] -ml-[20%]" />
-                                    <h4 x-text="programlordag.kunster" class="place-self-center text-rod-500 font-khand font-bold text-[30px] tracking-[5px]"></h4>
+                                    <h4 x-text="programlordag.kunster" class=" items-center self-center text-rod-500 font-khand font-bold text-[30px]"></h4>
                                 </article>
-                                <p x-text="programlordag.beskrivelse" class="text-[16px] pt-6 px-8 font-anek tracking-[2px]"></p>
-                                <div class="flex flex-row place-self-center px-8 py-12 justify-center text-rod-500 font-khand font-bold text-[30px] tracking-[2px] space-x-6">
+                                <p x-text="programlordag.beskrivelse" class="text-[16px] pt-6 px-8 font-anek "></p>
+                                <span class="px-8 flex">
+                                    <a class="bg-blo-500 font-khand text-cream-500 close font-bold rounded-[7px] py-1 px-4  text-[13px] min-[950px]:text-[20px] min-[950px]:px-[30px]" href="programsingle">LÆS MERE</a>
+                                </span>
+
+                                <div class="flex flex-row px-8 py-12  text-rod-500 font-khand font-bold text-[30px] space-x-6 justify-center items-center">
                                     <span>Spiller</span>
                                     <span x-text="programlordag.tidspunkt"></span>
-                                </div>
+                            </div>
                             </div>
                         </template>
                     </section>
@@ -30,19 +38,48 @@
     </article>
 </section>
 
+<style>
+
+    :root {
+      --hover: #C7522A; /* Define the hover color */
+    }
+    
+    .close:hover,
+    .close:focus {
+      box-shadow: 
+        inset -4.5em 0 0 0 var(--hover),
+        inset 4.5em 0 0 0 var(--hover);  
+    }
+    
+    button {  
+  
+      transition: 0.25s;
+      
+      &:hover,
+      &:focus { 
+        border-color: var(--hover);
+       
+      }
+    }
+    
+  
+    </style>
 
 <script>
 
 
     import { inView } from "motion";
     
-    const jsani2 = document.querySelector(".jsani2");
+    const jsani1 = document.querySelector(".jsani1");
     
-    inView(jsani2, () => {
-      jsani2.classList.add("animate__animated", "animate__fadeInDown");
+    inView(jsani1, () => {
+      jsani1.classList.add("animate__animated", "animate__fadeIn");
     });
     
     
     
     
     </script>
+
+
+
